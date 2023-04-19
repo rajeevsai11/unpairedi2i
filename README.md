@@ -29,4 +29,15 @@ $ python run_EGSDE.py
 ## Evaluation
 ```
 $ python run_score.py
+----------------------------
+# while runing on colab the pretrained models location is available in the drive, so directly access it as mentioned below
+append = '/content/unpairedi2i/'
+loc = '/content/drive/MyDrive/mtech project/'
+argsall = argparse.Namespace(
+    testdata_path = append+'data/afhq/val/cat',
+    ckpt = loc+'pretrained_model/afhq_dog_4m.pt',
+    dsepath = loc+'pretrained_model/cat2dog_dse.pt',
+    config_path = append+'profiles/cat2dog/cat2dog.yml',
+these changes are to be done in the file '/content/unpairedi2i/profiles/cat2dog/args.py' find this file and replace it with the code as mentioned above
+
 
